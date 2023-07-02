@@ -1,3 +1,9 @@
+<?php 
+declare(strict_types = 1)
+include './includes/autholoader.inc.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +13,16 @@
 </head>
 <body>
    <?php 
-   include './includes/person02.inc.php';
-
-   $person01 = new Person("Revy","Grey",25);
+ 
+   $person01 = new Person\Person("Revy","Grey",25);
    echo $person01->getName();
    echo $person01->eyeColor;
    $person01->setName('Krim');
    echo $person01->getName();
 
-   echo Person::$drinkingAge;
-   Person::setDrinkingAge(18);
-   echo Person::$drinkingAge;
+   echo Person\Person::$drinkingAge;
+   Person\Person::setDrinkingAge(18);
+   echo Person\Person::$drinkingAge;
    ?>
 </body>
 </html>

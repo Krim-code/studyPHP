@@ -1,4 +1,5 @@
 <?php 
+namespace Person;
 class Person{
     private $name;
     public $eyeColor;
