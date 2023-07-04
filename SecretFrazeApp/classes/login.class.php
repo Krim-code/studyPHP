@@ -4,8 +4,8 @@ class Login{
 
     public function __construct(private $login,private $password){
         $db = new Databases($this->login,$this->password);
-        if ($db->checkLoginUser() == true){
-            if($db->checkPassword() == true){
+        if ($db->checkLoginUser()){
+            if($db->checkPassword()){
                 $this-> user_secret = $db->getSecret();
                 session_start();
                 $_SESSION['logged_in'] = true;

@@ -2,7 +2,7 @@
 class Reg{
     public function __construct(private $username, private $password, private $secret) {
         $db = new Databases($this->username,$this->password,$this->secret);
-        if ($db->checkLoginUser() == true){
+        if ($db->checkLoginUser()){
             echo "User is alredy exists";
         }
         else{
