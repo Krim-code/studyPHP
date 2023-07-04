@@ -11,6 +11,7 @@ if(isset($_POST['log'])){
   
 }
 
+
 if(isset($_POST['reg'])){
     if(empty($_POST["reg"]["login"]) or empty($_POST["reg"]["password"]) or empty($_POST["reg"]["secret"])){
         echo "Write login or password ,please";
